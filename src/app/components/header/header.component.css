@@ -1,0 +1,78 @@
+header .topmenu {
+    background: #f0f0f0;
+    border-top: solid 1px #f0f0f0;
+    border-bottom: solid 1px #f0f0f0;
+}
+
+header .topmenu .top-contacts {
+    line-height: 25px;
+}
+
+header .topmenu ul {
+    margin: 0;
+}
+
+header .topmenu .top-contacts li {
+    color: #666;
+    padding: 5px 0;
+    font-size: 12px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+header .topmenu .top-contacts i {
+    color: #999;
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+header .topmenu .top-contacts li a {
+    color: #666;
+}
+
+header .topmenu .top-data {
+    text-align: right;
+}
+
+header .topmenu ul {
+    margin: 0;
+}
+
+header .topmenu .top-data li:first-child {
+    margin-left: 0;
+    border-left: solid 1px #eee;
+}
+
+header .topmenu .top-data li {
+    padding: 5px 11px;
+    margin-left: -4px;
+    display: inline-block;
+    border-right: solid 1px #eee;
+}
+
+header .topmenu .top-data li a {
+    font-size: 12px;
+}
+
+.top-social {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 25px;
+    border-radius: 50%;
+    /* background: #fff; */
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FB8700 !important;
+}
+
+
+/* .navbar-light .navbar-nav .nav-link :hover {
+    
+} */
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #686968 !important;
+}

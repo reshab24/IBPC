@@ -1,0 +1,36 @@
+<!-- about section -->
+<section class="about text-center" id="about">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="mask1 flex-center">
+        <div class="copule">
+          <div class="row align-items-center">
+            <div class="col text-light text-center">
+                <div class="banner-text">
+              <h1>News</h1>
+              <p>
+              Stay in the know. <br>
+            Receive our weekly newsletter and stay on top of what's available on IBPC. <br>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-sm-6" *ngFor="let data of news">
+        <div class="client-cont">
+          <h3>{{data.header}}</h3>
+          <p>{{data.body}}</p>
+          <p class="proboots bg-d text-light">
+            <a [href]="data.readMoreLink" class="btn text-light">Read More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of about section -->

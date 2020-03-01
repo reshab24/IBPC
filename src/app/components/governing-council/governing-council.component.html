@@ -1,0 +1,128 @@
+<div class="carousel-inner" style="z-index: -999;">
+  <div class="carousel-item active">
+    <div class="mask1 flex-center">
+      <div class="copule">
+        <div class="row align-items-center">
+          <div class="col text-light text-center">
+            <div class="banner-text">
+            <h2>Governing Council</h2>
+            <p>
+              The Governing Council is the main decision-making body <br>
+              Governing Council ( GC ) shall comprise of 11 Members and shall serve for two years<br><br>
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h3 style="margin:50px 0"></h3>
+  <p>Governing Council ( GC ) shall comprise of 11 Members and shall serve for two years. Thereafter, the GC shall be
+    elected at the Annual General meeting every 2 years, which shall be held three months before the term of the
+    existing board is expiring.
+    The GC shall elect President,Vice President, Secretary General, Joint Secretary General, Treasurer and Joint
+    Treasurer, by a simple majority of votes from among the members of the Governing Council The office bearers shall
+    have a term for two years.
+    The GC shall have the right to nominate and co-opt not more than two additional members to the Council provided that
+    such additional members have not contested the election for the relevant term and the members of the Council agree
+    unanimously to such nomination and co-option. The co-opted members shall not have the right to vote at any meeting
+    of the Governing Council.</p>
+</div>
+<div class="container">
+  <h3 style="margin:50px 0">Patrons</h3>
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+      <div class="section">
+        <div class="card">
+          <div class="header">
+              <div class="main-position">Chief Patron</div>
+            <div class="avatar">
+              <img src="assets/img/governing-council/blank.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="user-meta has-text-centered">
+              <!-- <h3 class="username">Mr. L.K. Verma</h3> -->
+              <h5 class="position">Chief Patron</h5>
+            </div>
+            <div class="user-bio has-text-centered">
+              <p>His.Excellency. Fawaz Abdullah bin Jumah Al Tenaiji,
+                Private Secretary to His Highness Ruler of Ras Al Khaimah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="section">
+        <div class="card">
+          <div class="header">
+              <div class="main-position">Patron</div>
+            <div class="avatar">
+                <img src="assets/img/governing-council/blank.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="user-meta has-text-centered">
+              <!-- <h3 class="username">Helen Miller</h3> -->
+              <h5 class="position">Patron</h5>
+            </div>
+            <div class="user-bio has-text-centered">
+              <p>His.Excellency. Ambassador of India to UAE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="section">
+        <div class="card">
+          <div class="header">
+              <div class="main-position">Patron</div>
+            <div class="avatar">
+                <img src="assets/img/governing-council/blank.jpg" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="user-meta has-text-centered">
+              <!-- <h3 class="username">Helen Miller</h3> -->
+              <h5 class="position">Patron</h5>
+            </div>
+            <div class="user-bio has-text-centered">
+              <p>His.Excellency. Consul General of India to UAE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cantainer">
+      <h3 style="margin:50px 0">Members Of The Governing Council</h3>
+      <div class="row">
+        <div class="col-md-4 col-sm-6" *ngFor="let data of filesScale1">
+          <div class="section">
+            <div class="card">
+              <div class="header">
+              <div class="main-position">{{data.position}}</div>
+                <div class="avatar">
+                  <img src="{{data.img}}" />
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="user-meta has-text-centered">
+                  <h5 class="position">{{data.post}}</h5>
+                </div>
+                <div class="user-bio has-text-centered">
+                  <p>{{data.name}}<br>
+                    {{data.company}}<br>
+                  {{data.contact}}<br>
+                  {{data.email}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>

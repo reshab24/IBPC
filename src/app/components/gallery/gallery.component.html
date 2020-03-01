@@ -1,0 +1,710 @@
+ <div class="carousel-inner" style="z-index: -999;">
+   <div class="carousel-item active">
+     <div class="mask1 flex-center">
+       <div class="copule">
+         <div class="row align-items-center">
+           <div class="col text-light text-center">
+             <div class="banner-text">
+             <h4>Have a glimpse <br>
+               of the events we organize.</h4>
+             <p> We believe events help us grow ourselves <br>
+               share our thoughts and enrich our mind.</p>
+            </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <!-- <div class="container-fluid" style="margin-top:20px;" id="page1">
+    <div class="row justify-content-end pr-4">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link color-d active" id="showall-tab" data-toggle="pill" href="#showall" role="tab" aria-controls="showall" aria-selected="true">Show All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-d" id="Gallery-tab" data-toggle="pill" href="#Gallery" role="tab" aria-controls="Gallery" aria-selected="false">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link color-d" id="New-tab" data-toggle="pill" href="#New" role="tab" aria-controls="New" aria-selected="false">City</a>
+          </li>
+        </ul>
+    </div> -->
+ <div class="eventheaderSection">
+   <div class="container">
+     <div class="row">
+       <div class="col-sm-4" style=" margin-top: 7px;">
+         <label class="control-label" style="color: #DAA520;">
+           <h1>{{EventHeader}}</h1>
+         </label>
+       </div>
+       <div class="col-sm-3" style=" margin-top: 7px;">
+
+       </div>
+       <div class="col-sm-1" style=" margin-top: 7px;">
+         <label for="sel1" class="control-label" style="margin-top: 6px;">Select Event:</label>
+       </div>
+       <div class="col-sm-3" style=" margin-top: 7px;">
+         <div class="form-group ">
+           <select [(ngModel)]='eventsData' (click)="selectEvent()" class="form-control "> select event
+             <option *ngFor="let data of Events" [ngValue]="data.id">{{data.name}}</option>
+           </select>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+ <div class="container-fluid">
+   <div *ngIf="showAll">
+     <ngx-gallery [options]="galleryOptionsAll" [images]="allevents"></ngx-gallery>
+   </div>
+
+   <div *ngIf="showEventOne">
+
+     <ngx-gallery [options]="galleryOptions" [images]="event1"></ngx-gallery>
+   </div>
+
+   <div *ngIf="showEventTwo">
+     <h1></h1>
+     <ngx-gallery [options]="galleryOptions" [images]="event2"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventThree">
+     <h1></h1>
+     <ngx-gallery [options]="galleryOptions" [images]="event3"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventFour">
+     <h1></h1>
+     <ngx-gallery [options]="galleryOptions" [images]="event4"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventFive">
+     <ngx-gallery [options]="galleryOptions" [images]="event5"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventSix">
+     <h1></h1>
+     <ngx-gallery [options]="galleryOptions" [images]="event6"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventSeven">
+     <ngx-gallery [options]="galleryOptions" [images]="event7"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventEight">
+     <ngx-gallery [options]="galleryOptions" [images]="event8"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventNine">
+     <ngx-gallery [options]="galleryOptions" [images]="event9"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventTen">
+     <ngx-gallery [options]="galleryOptions" [images]="event10"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventEleven">
+     <ngx-gallery [options]="galleryOptions" [images]="event11"></ngx-gallery>
+   </div>
+   <div *ngIf="showEventtwelve">
+     <ngx-gallery [options]="galleryOptions" [images]="event12"></ngx-gallery>
+   </div>
+ </div>
+
+ <!-- <div class="container">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="showall" role="tabpanel" aria-labelledby="showall-tab">
+            <div class="container-fluid grid fade show active" 
+                id="showall" role="tabpanel" aria-labelledby="showall-tab">
+                    <div class="row mx-auto justify-content-center">
+                        <div class="grid-item element-item p_one_third filter post">
+                            <img src="assets/img/gallery-page/first.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt="" 
+                            data-toggle="modal" data-target="#exampleModalCenter1">
+                            <div class="text-holder color-d">
+                                <p class="text">Consul General with DG, RAK Chamber of Commerce and Industry.</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo1" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/gallery-page/first.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>IBPC </h3>
+                                                  <p class="color-d">Consul General with DG, RAK Chamber of Commerce and Industry.</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo1" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo1" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item element-item p_one_third filter new">
+                            <img src="assets/img/item1.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                            data-toggle="modal" data-target="#exampleModalCenter2">
+                            <div class="text-holder color-d">
+                                <p class="text">BAG</p>
+                            </div>
+                            <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo2" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Los Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo2" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo2" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item element-item p_one_third filter post">
+                            <img src="assets/img/item1.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                            data-toggle="modal" data-target="#exampleModalCenter3">
+                            <div class="text-holder color-d">
+                                <p class="text">FISH</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo3" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Los Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo3" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo3" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-auto justify-content-center">
+                        <div class="grid-item element-item p_one_third filter post">
+                            <img src="assets/img/item2.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt="" 
+                            data-toggle="modal" data-target="#exampleModalCenter4">
+                            <div class="text-holder color-d">
+                                <p class="text">CLOCK</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo4" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item1.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Los Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item2.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item3.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo4" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo4" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item element-item p_one_third filter new">
+                            <img src="assets/img/item3.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                            data-toggle="modal" data-target="#exampleModalCenter5">
+                            <div class="text-holder color-d">
+                                <p class="text">BAG</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo5" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item3.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Los Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item4.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item5.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo5" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo5" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item element-item p_one_third filter post">
+                            <img src="assets/img/item4.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                            data-toggle="modal" data-target="#exampleModalCenter6">
+                            <div class="text-holder color-d">
+                                <p class="text">FISH</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo6" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item4.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item4.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item5.jpg" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo6" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo6" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="Gallery" role="tabpanel" aria-labelledby="Gallery-tab">
+            <div class="container-fluid grid fade show active" 
+                id="showall" role="tabpanel" aria-labelledby="showall-tab">
+                <div class="row mx-auto justify-content-center">
+                    <div class="grid-item element-item p_one_third filter post">
+                          <img src="assets/img/item2.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt="" 
+                          data-toggle="modal" data-target="#exampleModalCenter4">
+                          <div class="text-holder color-d">
+                              <p class="text">CLOCK</p>
+                          </div>
+                          <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-img pt-7">
+                                      <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                      <div id="demo4" class="carousel slide" data-ride="carousel">
+                                          <div class="carousel-zoom">
+                                            <div class="carousel-item active">
+                                              <img src="assets/img/item1.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                              <div class="carousel-caption color-d">
+                                                <h3>Los Angeles</h3>
+                                                <p class="color-d">We had such a great time in LA!</p>
+                                              </div>   
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img src="assets/img/item2.jpg" class="rounded-circle border border-warning" alt="">
+                                              <div class="carousel-caption color-d">
+                                                <h3>Chicago</h3>
+                                                <p class="color-d">Thank you, Chicago!</p>
+                                              </div>   
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img src="assets/img/item3.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                              <div class="carousel-caption color-d">
+                                                <h3>New York</h3>
+                                                <p class="color-d">We love the Big Apple!</p>
+                                              </div>   
+                                            </div>
+                                          </div>
+                                          <a class="carousel-control-prev zoom-prev" href="#demo4" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                          </a>
+                                          <a class="carousel-control-next zoom-next" href="#demo4" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="grid-item element-item p_one_third filter new">
+                          <img src="assets/img/item3.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                          data-toggle="modal" data-target="#exampleModalCenter5">
+                          <div class="text-holder color-d">
+                              <p class="text">BAG</p>
+                          </div>
+                          
+                          <div class="modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-img pt-7">
+                                      <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                      <div id="demo5" class="carousel slide" data-ride="carousel">
+                                          <div class="carousel-zoom">
+                                            <div class="carousel-item active">
+                                              <img src="assets/img/item3.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                              <div class="carousel-caption color-d">
+                                                <h3>Los Angeles</h3>
+                                                <p class="color-d">We had such a great time in LA!</p>
+                                              </div>   
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img src="assets/img/item4.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                              <div class="carousel-caption color-d">
+                                                <h3>Chicago</h3>
+                                                <p class="color-d">Thank you, Chicago!</p>
+                                              </div>   
+                                            </div>
+                                            <div class="carousel-item">
+                                              <img src="assets/img/item5.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                              <div class="carousel-caption color-d">
+                                                <h3>New York</h3>
+                                                <p class="color-d">We love the Big Apple!</p>
+                                              </div>   
+                                            </div>
+                                          </div>
+                                          <a class="carousel-control-prev zoom-prev" href="#demo5" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                          </a>
+                                          <a class="carousel-control-next zoom-next" href="#demo5" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="grid-item element-item p_one_third filter post">
+                        <img src="assets/img/item4.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                        data-toggle="modal" data-target="#exampleModalCenter6">
+                        <div class="text-holder color-d">
+                            <p class="text">FISH</p>
+                        </div>
+                        
+                        <div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-img pt-7">
+                                    <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div id="demo6" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-zoom">
+                                          <div class="carousel-item active">
+                                            <img src="assets/img/item4.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                            <div class="carousel-caption color-d">
+                                              <h3>Angeles</h3>
+                                              <p class="color-d">We had such a great time in LA!</p>
+                                            </div>   
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/img/item4.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                            <div class="carousel-caption color-d">
+                                              <h3>Chicago</h3>
+                                              <p class="color-d">We had such a great time in LA!</p>
+                                            </div>   
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/img/item5.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                            <div class="carousel-caption color-d">
+                                              <h3>New York</h3>
+                                              <p class="color-d">We had such a great time in LA!</p>
+                                            </div>   
+                                          </div>
+                                        </div>
+                                        <a class="carousel-control-prev zoom-prev" href="#demo6" data-slide="prev">
+                                          <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next zoom-next" href="#demo6" data-slide="next">
+                                          <span class="carousel-control-next-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="New" role="tabpanel" aria-labelledby="New-tab">
+            <div class="container-fluid grid fade show active" 
+                id="showall" role="tabpanel" aria-labelledby="showall-tab">
+                <div class="row mx-auto justify-content-center">
+                        <div class="grid-item element-item p_one_third filter post">
+                            <img src="assets/img/item2.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt="" 
+                            data-toggle="modal" data-target="#exampleModalCenter4">
+                            <div class="text-holder color-d">
+                                <p class="text">CLOCK</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo4" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item1.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Los Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item2.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item3.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo4" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo4" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item element-item p_one_third filter new">
+                            <img src="assets/img/item3.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                            data-toggle="modal" data-target="#exampleModalCenter5">
+                            <div class="text-holder color-d">
+                                <p class="text">BAG</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo5" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item3.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Los Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item4.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">Thank you, Chicago!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item5.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We love the Big Apple!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo5" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo5" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item element-item p_one_third filter post">
+                            <img src="assets/img/item4.jpg" class="desvanecer cursor-p rounded-circle border border-warning" alt=""
+                            data-toggle="modal" data-target="#exampleModalCenter6">
+                            <div class="text-holder color-d">
+                                <p class="text">FISH</p>
+                            </div>
+                            
+                            <div class="modal fade" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-img pt-7">
+                                        <button type="button" class="cursor-p close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div id="demo6" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-zoom">
+                                              <div class="carousel-item active">
+                                                <img src="assets/img/item4.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Angeles</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item4.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>Chicago</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                              <div class="carousel-item">
+                                                <img src="assets/img/item5.jpg" width="100%" class="rounded-circle border border-warning" alt="">
+                                                <div class="carousel-caption color-d">
+                                                  <h3>New York</h3>
+                                                  <p class="color-d">We had such a great time in LA!</p>
+                                                </div>   
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev zoom-prev" href="#demo6" data-slide="prev">
+                                              <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next zoom-next" href="#demo6" data-slide="next">
+                                              <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,41 @@
+.carousel-inner {
+    background: -webkit-linear-gradient(left, #000, #e0ac20);
+    background: -o-linear-gradient(left, #000, blue);
+    background: -moz-linear-gradient(left, #000, blue);
+    background: linear-gradient(to left, #000000c9, #dda928);
+}
+.carousel-inner{
+    background-image: url("assets/img/header/affiliatedBodies.PNG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.copule{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-text{
+    padding: 90px 0px;
+}
+
+@media screen and (max-width: 1060px) {
+    .banner-text{
+    padding: 10px 0px;
+    /* display: none; */
+    }
+    .proboots{
+      margin-bottom: 0px;    
+    }   
+}
+
+@media screen and (max-width: 560px) {
+    .banner-text{
+    padding: 0px 0px;
+    }
+    .proboots{
+      margin-bottom: 0px;    
+    }
+    .banner-inner{
+    display: none;
+    }
+}
+
